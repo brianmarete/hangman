@@ -1,17 +1,34 @@
-import java.util.Random;
+import java.net.URI;
+import java.net.URISyntaxException;
+import java.util.*;
+import java.util.stream.*;
+import java.nio.file.*;
+import java.io.IOException;
 
 class Dictionary {
 
   Random randomGenerator = new Random();
-  String[][] words ={
-    {"cow", "chicken", "pizza", "bread", "stones","sticks", "leaves", "letters", "alphabet", "soup", "hungry", "tired", "sleepy", "noisy", "caring", "friends", "month", "day", "light"},
-    {"lyrics", "songs", "ballads", "shapes", "triangle", "circle", "medicine", "six", "seven", "flower", "rose", "petal"
-},
-    { " specification", " structure", " lexical", " likewise", " management", " manipulate", " mathematics", " hotjava", " vertex", " unsigned", " traditional"
-    }};
+  List<String> wordList = new ArrayList<>();
+  URI dictionaryPath;
+  
+  public Dictionary() {
+    try {
+      initializeWordList();
+    } catch(IOException|URISyntaxException e) {
+      System.out.println("Couldn't open dictionary file");
+    }
+  }
+  
+  public String getRandomWord() {
+    int index = randomGenerator.nextInt(wordList.size()); 
+    return wordList.get(index);
+  }
 
-  public String getRandomWord(int difficultyLevel) {
-    int length = words[difficultyLevel].length;
-    return words[difficultyLevel][randomGenerator.nextInt(length)];
+  public void initializeWordList() throws IOException, URISyntaxException {
+    dictionaryPath = this.getClass().getClassLoader().getResource("dictionary.txt").toURI();
+    
+    try (Stream<String> stream = Files.lines(Paths.get(dictionaryPath))) {
+      wordList = stream.map(String::toUpperCase).collect(Collectors.toList());
+    } 
   }
 }

@@ -12,6 +12,6 @@ public class DictionaryTest {
 
   @Test
   public void getRandomWord_returnsAWord() {
-    assertTrue(testDictionary.getRandomWord(1) instanceof java.lang.String);
+    assertTrue(testDictionary.getRandomWord() instanceof java.lang.String);
   }
 }
