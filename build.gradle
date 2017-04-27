@@ -13,6 +13,13 @@ dependencies {
   testCompile group: 'junit', name: 'junit', version: '4.+'
 }
 
+test {
+  testLogging {
+    exceptionFormat = 'full'
+    events "passed", "skipped", "failed"
+  }
+}
+
 run {
   standardInput = System.in
 }
