@@ -11,4 +11,9 @@ public class Game {
   public String getMysteryWord() {
     return this.mMysteryWord;
   }
+
+  public String getCondensedCurrentGuess() {
+    String guess = this.mCurrentGuess.toString();
+    return guess.replace(" ", "");
+  }
 }
