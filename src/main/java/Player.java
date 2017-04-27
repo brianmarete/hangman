@@ -35,4 +35,14 @@ public class Player {
     return guess.equals(game.getMysteryWord());
   }
 
+  public boolean playGuess(char guess) {
+    this.mPreviousGuesses.add(guess);
+    boolean isItAGoodGuess = this.mGame.checkGuess(guess);
+
+    if (!isItAGoodGuess) {
+      this.mCurrentTry++;
+    }
+
+    return isItAGoodGuess;
+  }
 }
