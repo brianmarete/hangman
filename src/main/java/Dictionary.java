@@ -7,9 +7,9 @@ import java.io.IOException;
 
 class Dictionary {
 
-  Random randomGenerator = new Random();
-  List<String> wordList = new ArrayList<>();
-  URI dictionaryPath;
+  private Random randomGenerator = new Random();
+  private List<String> wordList = new ArrayList<>();
+  private URI dictionaryPath;
   
   public Dictionary() {
     try {
