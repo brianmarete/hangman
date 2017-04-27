@@ -42,4 +42,113 @@ public class Game {
   public boolean gameOver(Player player) {
     return (player.didWeWin(this) || player.didWeLose(this));
   }
+
+  public boolean checkGuess(char guess) {
+    boolean isItAGoodGuess = false;
+
+    for (int i = 0; i < this.mMysteryWord.length(); i++) {
+      if (this.mMysteryWord.charAt(i) == guess) {
+        /* 
+         * A character at index i in the mystery word corresponds with
+         * the character at index i * 2 in the current guess.
+         * So if the player's guess is correct, we need to change the character
+         * at index i * 2 of the current guess as to "reveal" the character.
+         * */
+        this.mCurrentGuess.setCharAt(i * 2, guess);
+        isItAGoodGuess = true;
+      }
+    }
+
+    return isItAGoodGuess;
+  }
+
+  public String drawPicture(Player player) {
+    switch(player.getCurrentTry()){
+      case 0: return drawPost();
+      case 1: return drawHead();
+      case 2: return drawBody();
+      case 3: return drawOneArm();
+      case 4: return drawSecondArm();
+      case 5: return drawFirstLeg();
+      default: return drawFullPerson();
+    }
+  }
+
+  private String drawPost() {
+    return " - - - - -\n"+
+       "|        |\n"+
+       "|        \n" +
+       "|       \n"+
+       "|        \n" +
+       "|       \n" +
+       "|\n" +
+       "|\n";
+  }
+
+  private String drawHead() {
+    return " - - - - -\n"+
+         "|        |\n"+
+         "|        O\n" +
+         "|       \n"+
+         "|        \n" +
+         "|       \n" +
+         "|\n" +
+        "|\n"; 
+  }
+
+  private String drawBody() {
+     return " - - - - -\n"+
+         "|        |\n"+
+         "|        O\n" +
+         "|        | \n"+
+         "|        |\n" +
+         "|        \n" +
+         "|\n" +
+        "|\n"; 
+  }
+
+  private String drawOneArm() {
+    return   " - - - - -\n"+
+         "|        |\n"+
+         "|        O\n" +
+         "|      / |  \n"+
+         "|        |\n" +
+         "|        \n" +
+         "|\n" +
+        "|\n"; 
+  }
+
+  private String drawSecondArm() {
+   return  " - - - - -\n"+
+       "|        |\n"+
+       "|        O\n" +
+       "|      / | \\ \n"+
+       "|        |\n" +
+       "|        \n" +
+       "|\n" +
+      "|\n"; 
+  }
+
+  private String drawFirstLeg() {
+   return   " - - - - -\n"+
+       "|        |\n"+
+       "|        O\n" +
+       "|      / | \\ \n"+
+       "|        |\n" +
+       "|       / \n" +
+       "|\n" +
+      "|\n"; 
+  }
+
+  private String drawFullPerson() {
+    return   " - - - - -\n"+
+         "|        |\n"+
+         "|        O\n" +
+         "|      / | \\ \n"+
+         "|        |\n" +
+         "|       / \\ \n" +
+         "|\n" +
+        "|\n"; 
+  }
+
 }
