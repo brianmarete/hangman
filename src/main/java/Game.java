@@ -8,5 +8,7 @@ public class Game {
     this.mCurrentGuess = initializeCurrentGuess(this.mMysteryWord);
   }
 
-
+  public String getMysteryWord() {
+    return this.mMysteryWord;
+  }
 }
