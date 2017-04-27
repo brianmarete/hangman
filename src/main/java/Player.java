@@ -20,4 +20,19 @@ public class Player {
     return this.mPreviousGuesses.contains(guess);
   }
 
+  public boolean didWeLose() {
+    return (this.mCurrentTry >= Game.MAX_GUESSES);
+  }
+
+  /* 
+   * I could have put this method in the game class because it only uses
+   * methods in that class but I put it here so I can check if an 
+   * individual player object has won a game. Plus "player.didWeWin(game)"
+   * reads better to me.
+   * */
+  public boolean didWeWin(Game game) {
+    String guess = game.getCondensedCurrentGuess();
+    return guess.equals(game.getMysteryWord());
+  }
+
 }
