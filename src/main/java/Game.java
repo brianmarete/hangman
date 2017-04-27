@@ -74,7 +74,7 @@ public class Game {
     }
   }
 
-  private String drawPost() {
+  public String drawPost() {
     return " - - - - -\n"+
        "|        |\n"+
        "|        \n" +
@@ -85,7 +85,7 @@ public class Game {
        "|\n";
   }
 
-  private String drawHead() {
+  public String drawHead() {
     return " - - - - -\n"+
          "|        |\n"+
          "|        O\n" +
@@ -96,7 +96,7 @@ public class Game {
         "|\n"; 
   }
 
-  private String drawBody() {
+  public String drawBody() {
      return " - - - - -\n"+
          "|        |\n"+
          "|        O\n" +
@@ -107,7 +107,7 @@ public class Game {
         "|\n"; 
   }
 
-  private String drawOneArm() {
+  public String drawOneArm() {
     return   " - - - - -\n"+
          "|        |\n"+
          "|        O\n" +
@@ -118,7 +118,7 @@ public class Game {
         "|\n"; 
   }
 
-  private String drawSecondArm() {
+  public String drawSecondArm() {
    return  " - - - - -\n"+
        "|        |\n"+
        "|        O\n" +
@@ -129,7 +129,7 @@ public class Game {
       "|\n"; 
   }
 
-  private String drawFirstLeg() {
+  public String drawFirstLeg() {
    return   " - - - - -\n"+
        "|        |\n"+
        "|        O\n" +
@@ -140,7 +140,7 @@ public class Game {
       "|\n"; 
   }
 
-  private String drawFullPerson() {
+  public String drawFullPerson() {
     return   " - - - - -\n"+
          "|        |\n"+
          "|        O\n" +
