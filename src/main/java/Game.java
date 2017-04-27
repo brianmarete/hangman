@@ -1,7 +1,7 @@
 public class Game {
   private String mMysteryWord;
   private StringBuilder mCurrentGuess; // I used StringBuilder because it is mutable
-  private static final int MAX_GUESSES = 6;
+  public static final int MAX_GUESSES = 6;
 
   public Game(String word) {
     this.mMysteryWord = word;
