@@ -16,4 +16,8 @@ public class Game {
     String guess = this.mCurrentGuess.toString();
     return guess.replace(" ", "");
   }
+
+  public String getFormalCurrentGuess() {
+    return "Current Guess: " + this.mCurrentGuess.toString();
+  }
 }
