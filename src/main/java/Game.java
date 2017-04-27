@@ -33,14 +33,14 @@ public class Game {
      * because the output will consist of an equal number of underscores and spaces.
      * */
     for (int i = 0; i < word.length() * 2; i++) {
-      (i % 2 == 0) ? current.append("_") : current.append(" ");
+      current.append((i % 2 == 0) ? "_" : " ");
     }
 
     return current;
    }
   
   public boolean gameOver(Player player) {
-    return (player.didWeWin(this) || player.didWeLose(this));
+    return (player.didWeWin(this) || player.didWeLose());
   }
 
   public boolean checkGuess(char guess) {
