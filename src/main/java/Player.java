@@ -16,4 +16,8 @@ public class Player {
     return this.mCurrentTry;
   }
 
+  public boolean hasPreviouslyGuessed(char guess) {
+    return this.mPreviousGuesses.contains(guess);
+  }
+
 }
