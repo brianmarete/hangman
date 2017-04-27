@@ -38,4 +38,8 @@ public class Game {
 
     return current;
    }
+  
+  public boolean gameOver(Player player) {
+    return (player.didWeWin(this) || player.didWeLose(this));
+  }
 }
