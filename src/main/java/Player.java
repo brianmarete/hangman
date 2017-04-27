@@ -12,4 +12,8 @@ public class Player {
     this.mPreviousGuesses = new ArrayList<>();
   }
 
+  public int getCurrentTry() {
+    return this.mCurrentTry;
+  }
+
 }
