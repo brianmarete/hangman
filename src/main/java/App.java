@@ -15,13 +15,12 @@ public class App {
       do {
         System.out.println(hangman.getFormalCurrentGuess());
 
-        System.out.println(hangman.getMysteryWord());
         System.out.println("Tries left: " + (Game.MAX_GUESSES - player.getCurrentTry()));
-        System.out.println("\nEnter a character you think is in the word");
+        System.out.print("\nEnter a character you think is in the word: ");
         char guess = (sc.next().toUpperCase()).charAt(0);
 
         while (player.hasPreviouslyGuessed(guess)) {
-          System.out.println("\nTry again, you've already guessed that character.");
+          System.out.print("\nTry again, you've already guessed that character: ");
           guess = (sc.next().toUpperCase()).charAt(0);
         }
 
@@ -40,7 +39,7 @@ public class App {
         System.out.println("\nSorry, you lost. The word was " + hangman.getMysteryWord() + ".");
       }
 
-      System.out.println("\nDo you want to play another game? (Y/N)");
+      System.out.print("\nDo you want to play another game? (Y/N): ");
       char response = (sc.next().toUpperCase()).charAt(0);
       continuePlaying = (response == 'Y');
     }
