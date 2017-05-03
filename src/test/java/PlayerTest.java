@@ -13,9 +13,18 @@ public class PlayerTest {
   }
 
   @Test
-  public void Player_itInstantiatesCorrectly_true() {
+  public void getCurrentTry_itInstantiatesCorrectly_0() {
     assertEquals(0, testPlayer.getCurrentTry());
   }
+
+  @Test
+  public void getCurrentTry_itIncrementsAfterPlayerGuessesWrongCharacter_1() {
+    testPlayer.playGuess('Q');
+    assertEquals(1, testPlayer.getCurrentTry());
+  }
+
+   
+      
 }
 
 
