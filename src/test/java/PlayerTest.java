@@ -25,16 +25,18 @@ public class PlayerTest {
     @Test
     public void getCurrentTry_itIncrementsAfterPlayerGuessesWrongCharacter_1() {
         testPlayer.playGuess('Q');
+        testPlayer.playGuess('M');
         assertEquals(1, testPlayer.getCurrentTry());
     }
     
     @Test
     public void hasPreviouslyGuessed_itShouldIncludeCharactersPreviouslyGuessed_true() {
         testPlayer.playGuess('Q');
+        testPlayer.playGuess('M');
         assertTrue(testPlayer.hasPreviouslyGuessed('Q'));
+        assertTrue(testPlayer.hasPreviouslyGuessed('M'));
     }
-   
-
+        
       
 }
 
