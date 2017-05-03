@@ -36,8 +36,29 @@ public class PlayerTest {
         assertTrue(testPlayer.hasPreviouslyGuessed('Q'));
         assertTrue(testPlayer.hasPreviouslyGuessed('M'));
     }
-        
       
+    @Test
+    public void didWeLose_itShouldReturnTrueIfPlayerGuessesIncorrectlySixTimes_true() {
+       // First guess is correct but the rest are incorrect 
+        testPlayer.playGuess('M');
+        testPlayer.playGuess('Q');
+        testPlayer.playGuess('U');
+        testPlayer.playGuess('B');
+        testPlayer.playGuess('T');
+        testPlayer.playGuess('Z');
+        testPlayer.playGuess('P');
+        assertTrue(testPlayer.didWeLose());
+    }
+
+    @Test
+    public void didWeWin_itShouldReturnTrueIfPlayerGuessesAllCorrectLetters_true() {
+        testPlayer.playGuess('M');
+        testPlayer.playGuess('O');
+        testPlayer.playGuess('V');
+        testPlayer.playGuess('I');
+        testPlayer.playGuess('E');
+        assertTrue(testPlayer.didWeWin(testGame));
+    }
 }
 
 
