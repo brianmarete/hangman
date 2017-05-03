@@ -136,5 +136,34 @@ public class GameTest {
   } 
 
   @Test
+  public void getFormalCurrentGuess_itShouldReturnCorrectNumberOfBlanksAndSpacesAtTheStart_String() {
+    String expected = "Current Guess: _ _ _ _ _ ";
+    assertEquals(expected, testGame.getFormalCurrentGuess());
+  }
 
+  @Test
+  public void getFormalCurrentGuess_itShouldReturnCorrectNumberOfBlanksAndSpacesAfterGuess_String() {
+    testPlayer.playGuess('M');
+    String expected = "Current Guess: M _ _ _ _ ";
+    assertEquals(expected, testGame.getFormalCurrentGuess());
+  }
+
+  @Test
+  public void checkGuess_itShouldReturnTrueForCorrectInput_true() {
+    assertTrue(testGame.checkGuess('M'));
+    assertTrue(testGame.checkGuess('O'));
+    assertTrue(testGame.checkGuess('V'));
+    assertTrue(testGame.checkGuess('I'));
+    assertTrue(testGame.checkGuess('E'));
+  }
+
+  @Test
+  public void checkGuess_itShouldReturnFalsForIncorrectInput_false() {
+    assertFalse(testGame.checkGuess('Q'));
+    assertFalse(testGame.checkGuess('1'));
+    assertFalse(testGame.checkGuess('+'));
+    assertFalse(testGame.checkGuess(' '));
+  }
+
+  
 }
