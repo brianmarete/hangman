@@ -1,4 +1,6 @@
 .gradle
 /build/
+.vscode/
+.settings/
 
 !gradle-wrapper.jar

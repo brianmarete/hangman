@@ -1,9 +1,16 @@
+plugins {
+    id 'net.saliman.cobertura' version '2.3.1'
+    id 'com.github.kt3k.coveralls' version '2.8.2'
+}
+
 apply plugin: 'java'
 apply plugin: 'application'
 
 archivesBaseName = "hangman"
 version = '1.0'
 mainClassName = "App"
+
+cobertura.coverageFormats = ['html', 'xml']
 
 repositories {
   mavenCentral()
