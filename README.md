@@ -1,6 +1,8 @@
+[![Build Status](https://travis-ci.org/brianmarete/hangman.svg?branch=master)](https://travis-ci.org/brianmarete/hangman) [![Coverage Status](https://coveralls.io/repos/github/brianmarete/hangman/badge.svg?branch=master)](https://coveralls.io/github/brianmarete/hangman?branch=master)
+
 # Hangman
 
-Description: Command line version of the popular wordgame. 
+Description: Command line version of the popular wordgame.
 
 This is a one player version of Hangman. Players have to guess a random English word one character at a time. Players are allowed 6 incorrect tries. Don't let the full picture of the hangman be drawn! Enjoy!
 
@@ -11,7 +13,7 @@ This is a one player version of Hangman. Players have to guess a random English 
 3. Run the tests:
   * Windows users should run `gradlew test`
   * macOS/Linux/Unix users run `./gradlew test`
-4. Start the application: 
+4. Start the application:
   * Windows users should run `gradlew run -q`
   * macOS/Linux/Unix users run `./gradlew run -q`
 
