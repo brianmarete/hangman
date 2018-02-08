@@ -23,11 +23,11 @@ public class Game {
 
   public StringBuilder initializeCurrentGuess(String word) {
     StringBuilder current = new StringBuilder();
-    
-    /* 
+
+    /*
      * The output for this method should consist of alternating
      * underscores and spaces eg "_ _ _ _". The number of underscores
-     * should be equal to the length of the passed in word. To do this 
+     * should be equal to the length of the passed in word. To do this
      * we need to append alternating "_" and " " to the StringBuilder object
      * using a loop that will run for twice the length of the passed in word
      * because the output will consist of an equal number of underscores and spaces.
@@ -38,7 +38,7 @@ public class Game {
 
     return current;
    }
-  
+
   public boolean gameOver(Player player) {
     return (player.didWeWin(this) || player.didWeLose());
   }
@@ -48,7 +48,7 @@ public class Game {
 
     for (int i = 0; i < this.mMysteryWord.length(); i++) {
       if (this.mMysteryWord.charAt(i) == guess) {
-        /* 
+        /*
          * A character at index i in the mystery word corresponds with
          * the character at index i * 2 in the current guess.
          * So if the player's guess is correct, we need to change the character
@@ -93,7 +93,7 @@ public class Game {
          "|        \n" +
          "|       \n" +
          "|\n" +
-        "|\n"; 
+        "|\n";
   }
 
   public String drawBody() {
@@ -104,7 +104,7 @@ public class Game {
          "|        |\n" +
          "|        \n" +
          "|\n" +
-        "|\n"; 
+        "|\n";
   }
 
   public String drawOneArm() {
@@ -115,7 +115,7 @@ public class Game {
          "|        |\n" +
          "|        \n" +
          "|\n" +
-        "|\n"; 
+        "|\n";
   }
 
   public String drawSecondArm() {
@@ -126,7 +126,7 @@ public class Game {
        "|        |\n" +
        "|        \n" +
        "|\n" +
-      "|\n"; 
+      "|\n";
   }
 
   public String drawFirstLeg() {
@@ -137,7 +137,7 @@ public class Game {
        "|        |\n" +
        "|       / \n" +
        "|\n" +
-      "|\n"; 
+      "|\n";
   }
 
   public String drawFullPerson() {
@@ -148,7 +148,7 @@ public class Game {
          "|        |\n" +
          "|       / \\ \n" +
          "|\n" +
-        "|\n"; 
+        "|\n";
   }
 
 }

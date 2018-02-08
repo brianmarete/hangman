@@ -28,7 +28,7 @@ public class PlayerTest {
         testPlayer.playGuess('M');
         assertEquals(1, testPlayer.getCurrentTry());
     }
-    
+
     @Test
     public void hasPreviouslyGuessed_itShouldIncludeCharactersPreviouslyGuessed_true() {
         testPlayer.playGuess('Q');
@@ -36,10 +36,10 @@ public class PlayerTest {
         assertTrue(testPlayer.hasPreviouslyGuessed('Q'));
         assertTrue(testPlayer.hasPreviouslyGuessed('M'));
     }
-      
+
     @Test
     public void didWeLose_itShouldReturnTrueIfPlayerGuessesIncorrectlySixTimes_true() {
-       // First guess is correct but the rest are incorrect 
+       // First guess is correct but the rest are incorrect
         testPlayer.playGuess('M');
         testPlayer.playGuess('Q');
         testPlayer.playGuess('U');

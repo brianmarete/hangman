@@ -40,7 +40,7 @@ public class GameTest {
          "|        \n" +
          "|       \n" +
          "|\n" +
-        "|\n"; 
+        "|\n";
 
     assertEquals(expected, testGame.drawPicture(testPlayer));
   }
@@ -73,7 +73,7 @@ public class GameTest {
          "|        |\n" +
          "|        \n" +
          "|\n" +
-        "|\n"; 
+        "|\n";
 
     assertEquals(expected, testGame.drawPicture(testPlayer));
   }
@@ -91,7 +91,7 @@ public class GameTest {
          "|        |\n" +
          "|        \n" +
          "|\n" +
-        "|\n"; 
+        "|\n";
 
     assertEquals(expected, testGame.drawPicture(testPlayer));
   }
@@ -110,7 +110,7 @@ public class GameTest {
          "|        |\n" +
          "|       / \n" +
          "|\n" +
-        "|\n"; 
+        "|\n";
 
     assertEquals(expected, testGame.drawPicture(testPlayer));
   }
@@ -130,10 +130,10 @@ public class GameTest {
          "|        |\n" +
          "|       / \\ \n" +
          "|\n" +
-        "|\n"; 
+        "|\n";
 
     assertEquals(expected, testGame.drawPicture(testPlayer));
-  } 
+  }
 
   @Test
   public void getFormalCurrentGuess_itShouldReturnCorrectNumberOfBlanksAndSpacesAtTheStart_String() {
@@ -165,5 +165,5 @@ public class GameTest {
     assertFalse(testGame.checkGuess(' '));
   }
 
-  
+
 }
