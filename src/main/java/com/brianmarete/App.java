@@ -1,3 +1,5 @@
+package com.brianmarete;
+
 import java.util.Scanner;
 
 public class App {

@@ -1,3 +1,5 @@
+package com.brianmarete;
+
 import org.junit.*;
 import static org.junit.Assert.*;
 

@@ -1,3 +1,5 @@
+package com.brianmarete;
+
 import java.net.URI;
 import java.net.URISyntaxException;
 import java.util.*;

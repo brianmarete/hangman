@@ -1,3 +1,5 @@
+package com.brianmarete;
+
 public class Game {
   private String mMysteryWord;
   private StringBuilder mCurrentGuess; // I used StringBuilder because it is mutable
