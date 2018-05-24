@@ -27,4 +27,8 @@ hs_err_pid*
 .vscode/
 .settings/
 
+bin/
+.project
+.classpath
+
 !gradle-wrapper.jar
